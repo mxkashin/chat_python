@@ -5,7 +5,6 @@ host = "127.0.0.1"
 port = 5000
 users = []
 
-#We will be using UDP
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.bind((host, port))
 s.setblocking(0)

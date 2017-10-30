@@ -33,7 +33,7 @@ print("-----------------------------")
 message = input(alias + "-> ")
 while str(message) != "q":
     if str(message) != "":
-        s.sendto(alias.encode('ascii') + ": ".encode('ascii') + message.encode('ascii'), server)
+        s.sendto("{}: {}".format(alias, message).encode('ascii'), server)
     tlock.acquire()
     message = input(alias + "-> ")
     tlock.release()
